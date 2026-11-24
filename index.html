@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio website built from scratch with HTML5 and CSS3.">
+  <title>Portfolio | Home</title>
+  <!-- Extra 1: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrapper topbar-inner">
+      <a href="index.html" class="brand">PORTFOLIO</a>
+
+      <!-- Menu toggle thuần CSS (không cần JS) -->
+      <input type="checkbox" id="menu-btn" class="menu-checkbox">
+      <label for="menu-btn" class="menu-icon" aria-label="Toggle Menu">&#9776;</label>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="wrapper hero-layout">
+        <div class="hero-text">
+          <div class="profile-row">
+            <img src="images/avatar.jpg" alt="Profile avatar" class="avatar">
+            <div>
+              <span class="badge">Creative &amp; Web Developer</span>
+              <h1>Building Clean &amp; Responsive Websites</h1>
+            </div>
+          </div>
+          <p>
+            A minimalist personal portfolio designed from scratch with semantic HTML5,
+            responsive CSS Grid/Flexbox, and verified W3C standards.
+          </p>
+          <a href="gallery.html" class="btn">View Projects</a>
+        </div>
+
+        <div class="hero-media">
+          <img src="images/hero.jpg" alt="Portfolio showcase banner">
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Work (1 cột trên mobile -> 3 cột trên desktop) -->
+    <section class="section">
+      <div class="wrapper">
+        <h2>Featured Work</h2>
+        <div class="card-grid">
+          <article class="card">
+            <img src="images/work1.jpg" alt="Project 1 preview">
+            <div class="card-body">
+              <span class="tag">Web Design</span>
+              <h3>Project Title 01</h3>
+              <p>Short description of layout structure and responsive behavior.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/work2.jpg" alt="Project 2 preview">
+            <div class="card-body">
+              <span class="tag">UI Study</span>
+              <h3>Project Title 02</h3>
+              <p>Focused on clear visual hierarchy and readable spacing.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/work3.jpg" alt="Project 3 preview">
+            <div class="card-body">
+              <span class="tag">Front-End</span>
+              <h3>Project Title 03</h3>
+              <p>Clean semantic markup with accessible form and navigation states.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (khớp phần Get in Touch ở bản sketch) -->
+    <section id="contact" class="section">
+      <div class="wrapper contact-card">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Feel free to reach out for project collaboration or feedback on this portfolio.</p>
+        </div>
+
+        <form action="#" method="post" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper footer-inner">
+      <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Projects</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

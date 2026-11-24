@@ -1,0 +1,54 @@
+/* Tablet: từ 768px trở lên */
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr 1.2fr;
+    padding: 28px;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Desktop: từ 1024px trở lên */
+@media (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .hero-layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    flex: 1.1;
+  }
+
+  .hero-media {
+    flex: 0.9;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

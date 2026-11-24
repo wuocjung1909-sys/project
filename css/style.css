@@ -1,0 +1,255 @@
+/* 1. Reset & Base + Extra 1: Google Fonts */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 64px; /* Chừa chỗ cho sticky/fixed header */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+  line-height: 1.25;
+  color: #0f172a;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 2. Extra 2: Fixed/Sticky Topbar + Pure CSS Mobile Menu */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: #0f172a;
+  color: #ffffff;
+  z-index: 100;
+}
+
+.topbar-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+.menu-icon {
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.main-nav {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background-color: #0f172a;
+  padding: 16px;
+}
+
+.menu-checkbox:checked ~ .main-nav {
+  display: block;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-list a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 3. Extra 3: Smooth Hover & Focus Transitions */
+.nav-list a,
+.btn,
+.card {
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a.active {
+  color: #60a5fa;
+}
+
+/* 4. Sections & Extra 4: Responsive Flexbox + CSS Grid */
+.hero {
+  background-color: #ffffff;
+  padding: 36px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 4px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 36px 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 cột */
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+/* Contact & Footer */
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 20px 0;
+  margin-top: 24px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+}
